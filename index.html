@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>budget-app</title>
+<style>body{font:16px/1.6 system-ui;margin:3rem 1.5rem;text-align:center}</style>
+<h1>budget-app</h1>
+<p id="m">앱으로 돌아가는 중…</p>
+<script>
+  // 은행 인가가 끝나면 Enable Banking이 ?code=...&state=... 를 붙여 이 페이지로 보낸다.
+  // Control Panel이 커스텀 스킴(budgetapp://)을 리다이렉트 URL로 안 받아서, 이 페이지가
+  // 그 자리를 대신하고 쿼리를 그대로 앱에 넘긴다. code는 여기 저장되지 않고 지나갈 뿐이다.
+  var target = 'budgetapp://auth' + location.search
+  location.replace(target)
+  setTimeout(function () {
+    var m = document.getElementById('m')
+    m.textContent = '자동으로 열리지 않으면 '
+    var a = document.createElement('a')
+    a.href = target
+    a.textContent = '여기를 누르세요'
+    m.appendChild(a)
+  }, 1500)
+</script>
