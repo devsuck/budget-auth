@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Notice — budget-app</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 42rem; margin: 3rem auto; padding: 0 1rem; line-height: 1.6 }
+  h1 { font-size: 1.4rem }
+  h2 { font-size: 1.05rem; margin-top: 2rem }
+</style>
+</head>
+<body>
+<h1>Privacy Notice — budget-app</h1>
+
+<p>budget-app is a personal household budgeting app used by a single
+individual on their own phone. It is not offered to other people and it has
+no user accounts, no server, and no operator other than its owner.</p>
+
+<h2>Who is responsible</h2>
+<p>The owner of the app and of the bank accounts it reads. Contact:
+<a href="mailto:tjrgns97502@gmail.com">tjrgns97502@gmail.com</a>.</p>
+
+<h2>What data is accessed</h2>
+<p>Account information (balances and transactions) from bank accounts that
+the owner has explicitly linked through the Enable Banking API under PSD2,
+and photographs of the owner's own shopping receipts.</p>
+
+<h2>Where the data goes</h2>
+<p>Into an SQLite database on the phone itself. There is no backend server
+and no analytics. Nothing is shared with third parties, sold, or used for
+advertising or profiling.</p>
+<p>Receipt photos are read by on-device text recognition (Android ML Kit /
+Apple Vision); the images do not leave the phone. Optionally, the extracted
+<em>product name strings</em> alone may be sent to the Anthropic API to
+normalise them. Amounts, balances, account identifiers, and any other bank
+data are never sent anywhere.</p>
+
+<h2>Credentials</h2>
+<p>API credentials and the bank session identifier are held in the operating
+system's keystore (Android Keystore / iOS Keychain). The app is locked behind
+biometric or device-credential authentication.</p>
+
+<h2>Retention</h2>
+<p>Data stays on the phone until the owner deletes it. Uninstalling the app
+removes the database. Bank access ends when the PSD2 consent expires (at most
+90 days) or when the owner revokes it at their bank.</p>
+
+<h2>Legal basis and rights</h2>
+<p>The owner processes their own personal data for their own purely personal
+and household purposes. Access, rectification, erasure, and withdrawal of
+consent are exercised directly on the device and at the bank.</p>
+
+<p><a href="./terms.html">Terms of use</a></p>
+</body>
+</html>
